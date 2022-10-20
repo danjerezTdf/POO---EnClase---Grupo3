@@ -1,7 +1,7 @@
 import { Examen } from "./class_Examen";
 import { Pregunta } from './class_Pregunta'
 
-class ExamenEspecial extends Examen{
+export class ExamenEspecial extends Examen{
     private _penalizacionRespuestainCorrecta: number;
 
     constructor(p_preguntas : Pregunta[], p_tema : string, p_puntajeAprobacion : number,p_penalizacionRespuestainCorrecta: number){
