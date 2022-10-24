@@ -18,7 +18,8 @@ constructor (p_consigna:string, p_opciones:Array<string>,p_opcionCorrecta:number
     this._opciones.push(p_opciones);
  }
 public setOpcionCorrecta(p_opcionCorrecta:number){
-    this._opcionCorrecta=p_opcionCorrecta;
+    this._opcionCorrecta = p_opcionCorrecta;
+    console.log("La Opcion correcta es :"+this._opcionCorrecta)
 }
 public esCorrecta(p_respuesta:number):boolean{
     if (this._opcionCorrecta = p_respuesta){
@@ -26,7 +27,6 @@ public esCorrecta(p_respuesta:number):boolean{
     } else {
         return false
     }
-    
 }
 public getPuntaje():number{
     return this._puntaje;
