@@ -29,10 +29,10 @@ export class Alumno {
             this._examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
             console.log(`El alumno ${this._nombre} ya rindió el examen`);
             return true;
-        } else {
-            console.log(`El alumno ${this._nombre} no rindió el examen`);
-            return false;
+            } else {
+                console.log(`El alumno ${this._nombre} no rindió el examen`);
+                return false;
+            }
+        }
     }
-
-    }
-
+}
