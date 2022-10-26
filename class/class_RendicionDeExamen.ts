@@ -21,10 +21,10 @@ export class RendicionDeExamen {
         let _promedio = sum / values.length;
 */
         if (_promedio  > 7) {
-         return true;
-      } else {
-         return false;
-      }
-      }
+            return true;
+            } else {
+                return false;
+            }
+        }
 
 }

@@ -24,13 +24,13 @@ export class Alumno {
         return this._DNI;
     }
     public rendirExamen(p_examen:Examen,p_respuestas:Array<number>,):boolean{
-        for(let i: number = 0; i< this.examenesRendidos.length; i++){
-            if(p_examen === this.examenesRendidos[i]){
-               this.examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
-            console.log(`El alumno ${this.nombre} ya rindió el examen`);
+        for(let i: number = 0; i< this._examenesRendidos.length; i++){
+            if(p_examen === this._examenesRendidos[i]){
+               this._examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
+            console.log(`El alumno ${this._nombre} ya rindió el examen`);
             return true;
         } else {
-            console.log(`El alumno ${this.nombre} no rindió el examen`);
+            console.log(`El alumno ${this._nombre} no rindió el examen`);
             return false;
     }
 
