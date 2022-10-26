@@ -1,4 +1,4 @@
-import { Alumno } from './class/class_Anumno'
+import { Alumno } from './class/class_Alumno'
 import { Examen } from './class/class_Examen'
 import { ExamenEspecial } from './class/class_ExamenEspecial'
 import { Pregunta } from './class/class_Pregunta'

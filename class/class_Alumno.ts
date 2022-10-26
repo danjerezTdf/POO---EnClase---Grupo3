@@ -26,7 +26,7 @@ export class Alumno {
     public rendirExamen(p_examen:Examen,p_respuestas:Array<number>,):boolean{
         for(let i: number = 0; i< this._examenesRendidos.length; i++){
             if(p_examen === this._examenesRendidos[i]){
-               this._examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
+            this._examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
             console.log(`El alumno ${this._nombre} ya rindió el examen`);
             return true;
         } else {
