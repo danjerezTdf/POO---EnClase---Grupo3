@@ -23,16 +23,18 @@ export class Alumno {
     public getDNI():number{
         return this._DNI;
     }
-    public rendirExamen(p_examen:Examen,p_respuestas:Array<number>,):boolean{
+    public rendirExamen(p_examen:Examen,p_respuestas:Array<number>):boolean{
+        let aux: boolean = false;
         for(let i: number = 0; i< this._examenesRendidos.length; i++){
             if(p_examen === this._examenesRendidos[i].getExamen()){
             this._examenesRendidos[i].rendicionDeExamen(p_examen, p_respuestas);
             console.log(`El alumno ${this._nombre} ya rindió el examen`);
-            return true;
+                aux = true;
             } else {
                 console.log(`El alumno ${this._nombre} no rindió el examen`);
-                return false;
+                aux = false;
             }
         }
+        return aux;
     }
 }
