@@ -9,22 +9,25 @@ export class RendicionDeExamen {
         this._respuestas = p_respuestas;
     }
     public rendicionDeExamen(p_examen: Examen, p_respuestas: Array<number>){
-
+        if (p_examen === this._examen) {
+            for (let i: number = 0; i < p_respuestas.length; i++) {
+                this._respuestas.push(p_respuestas[i]);
+                console.log(`El examen ${this._examen} se completó exitosamente`);
+        } else {
+                console.log(`El examen ${this._examen} no tiene respuestas`);
+               }
+        }
     }
     public getExamen(): Examen{
         return this._examen;
     }
     public estaAprobado(): boolean{
-        /* cómo traigo los valores??
-        let values = [2, 56, 3, 41, 0, 4, 100, 23];
-        let sum = values.reduce((previous, current) => current += previous);
-        let _promedio = sum / values.length;
-*/
-        if (_promedio  > 7) {
+        if (this._examen.equals() === true) {
+            console.log(`El alumno aprobó el ${this._examen}`);
             return true;
-            } else {
-                return false;
-            }
+        } else {
+            console.log(`El alumno desaprob{o el ${this._examen}`);
+            return false;
         }
-
+    }
 }
